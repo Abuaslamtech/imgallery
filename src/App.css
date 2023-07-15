@@ -135,11 +135,12 @@ input[type=submit]{
     justify-content: center;
     align-items: center;
   }
+
   .image, .card{
     width: 90vw;
   }
   .card_info{
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .author{
     gap: .5rem;

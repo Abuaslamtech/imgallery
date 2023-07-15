@@ -7,8 +7,6 @@ const Categories = () => {
         <div className="list">Sports</div>
         <div className="list">Nature</div>
         <div className="list">Background</div>
-        <div className="list">Kids</div>
-        <div className="list">Clothing</div>
       </section>
      );
 }
