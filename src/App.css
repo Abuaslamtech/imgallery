@@ -1,0 +1,144 @@
+*{
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+body{
+  margin: 0;
+}
+/* header */
+.logo{
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.logo h1{
+  font-weight: bolder;
+
+}
+.ic{
+  font-size: 4rem;
+}
+form{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 50%;
+  margin-top: 2rem;
+}
+input, button{
+  width: 30%;
+  border: 1px solid grey;
+  padding: 1.3rem;
+  border-radius: .3rem;
+}
+input[type=search]{
+  width: 70%;
+}
+input[type=submit]{
+  background-color: black;
+  color: white;
+}
+.categories{
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: .5rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.list{
+  background-color: grey;
+  border-radius: .5rem;
+  padding: .4rem;
+  text-align: center;
+  width: 5.5rem;
+}
+.active{
+  background-color: black;
+  color: white;
+}
+/* images */
+.images{
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.image{
+  height: 30rem;
+  width: 30rem;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+}
+.card_info, .author{
+  background-color: grey;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.author{
+  gap: 1rem;
+}
+.card_info{
+  justify-content: space-between;
+}
+.pic{
+  border-radius: 50%;
+}
+.download{
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+.download a{
+  color: white;
+}
+
+/* mobile responsive */
+@media screen and (max-width:700px) {
+  /* header */
+  form{
+    width: 90vw;
+  }
+  .categories{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* images */
+  .images{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .image, .card{
+    width: 90vw;
+  }
+  .card_info{
+    justify-content: space-around;
+  }
+  .author{
+    gap: .5rem;
+    width: 14rem;
+  }
+}
