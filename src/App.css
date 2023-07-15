@@ -10,6 +10,9 @@ body{
   margin: 0;
 }
 /* header */
+.head{
+  width:100%;
+}
 .logo{
   background-color: grey;
   display: flex;
@@ -121,6 +124,7 @@ input[type=submit]{
     width: 90vw;
   }
   .categories{
+    width: 50%;
     grid-template-columns: repeat(4, 1fr);
   }
   /* images */
