@@ -152,6 +152,6 @@ input[type="submit"] {
     width: 14rem;
   }
   .download {
-    width: fit-content;
+    width: 8rem;
   }
 }
