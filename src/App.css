@@ -147,10 +147,10 @@ input[type="submit"] {
   }
   .author {
     gap: 0.5rem;
-    width: 20%;
+    width: 30%;
   }
   .pic{
-    width: 80%;
+    width: 100%;
   }
   .download {
     width: fit-content;
