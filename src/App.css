@@ -125,6 +125,15 @@ input[type="submit"] {
   form {
     width: 90vw;
   }
+  input,
+button {
+  height: 3rem;
+}
+button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   .categories {
     width: 50%;
     grid-template-columns: repeat(3, 1fr);

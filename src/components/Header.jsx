@@ -7,7 +7,7 @@ const Header = ({ onSearch }) => {
     <div className="head">
       <div className="logo">
         <MdMonochromePhotos className="ic"/>
-        <h1>ImGallery</h1>
+        <h1>ImPics</h1>
       </div>
       <SearchImage onSearch={onSearch} />
       <Categories />
