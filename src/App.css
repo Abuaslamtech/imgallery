@@ -139,9 +139,6 @@ input[type=submit]{
   .image, .card{
     width: 90vw;
   }
-  .card_info{
-    justify-content: space-evenly;
-  }
   .author{
     gap: .5rem;
     width: 14rem;
