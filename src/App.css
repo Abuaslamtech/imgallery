@@ -143,15 +143,13 @@ input[type="submit"] {
     width: 90vw;
   }
   .card_info {
-    width: 100%;
-    justify-content: space-around;
-    padding: 0.5rem;
+    justify-content: space-between;
   }
   .author {
     gap: 0.5rem;
     width: 14rem;
   }
   .download {
-    width: 8rem;
+    width: 810em;
   }
 }
