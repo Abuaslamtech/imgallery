@@ -1,14 +1,19 @@
-const Categories = () => {
-    return ( 
-        <section className="categories">
-        <div className="list active">Random</div>
-        <div className="list">Culture</div>
-        <div className="list">Animals</div>
-        <div className="list">Sports</div>
-        <div className="list">Nature</div>
-        <div className="list">Background</div>
-      </section>
-     );
-}
- 
+
+
+const Categories = ({ onSearch }) => {
+  const handlebtnClick = (e) => {
+    onSearch(e.target.value)
+  };
+  return (
+    <section className="categories">
+      <input type="submit" className="list active" value={"Random"} onClick={handlebtnClick}/>
+      <input type="submit" className="list" value={"Animals"} onClick={handlebtnClick}/>
+      <input type="submit" className="list" value={"Sports"} onClick={handlebtnClick}/>
+      <input type="submit" className="list" value={"Nature"} onClick={handlebtnClick}/>
+      <input type="submit" className="list" value={"Culture"} onClick={handlebtnClick}/>
+      <input type="submit" className="list" value={"School"} onClick={handlebtnClick}/>
+    </section>
+  );
+};
+
 export default Categories;

@@ -10,7 +10,7 @@ const Header = ({ onSearch }) => {
         <h1>ImPics</h1>
       </div>
       <SearchImage onSearch={onSearch} />
-      <Categories />
+      <Categories onSearch={onSearch}/>
     </div>
   );
 };
