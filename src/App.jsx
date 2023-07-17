@@ -9,9 +9,21 @@ import Footer from "./components/Footer";
 function App() {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
+  const [query, setQuery] = useState("");
+
   useEffect(() => {
-    fetchImages(`https://api.unsplash.com/photos?page=${page}&per_page=12`);
+    fetchCurrentImages();
   }, [page]);
+
+  // general fetch
+  const fetchCurrentImages = () => {
+    if (query.trim() === "") {
+      fetchImages(`https://api.unsplash.com/photos?page=${page}&per_page=12`);
+    } else {
+      searchImage(query, page);
+    }
+  };
+  // fetch random images
   const fetchImages = (apiUrl) => {
     const accessKey = "Bpe7jTS9WHRy6H7EzCHeycdKQ2nXWiadkKYwDszJMXA";
     axios
@@ -29,9 +41,9 @@ function App() {
   };
 
   // search
-  const searchImage = (query) => {
+  const searchImage = (query, page) => {
     const accessKey = "Bpe7jTS9WHRy6H7EzCHeycdKQ2nXWiadkKYwDszJMXA";
-    const apiUrl = `https://api.unsplash.com/search/photos?page=${page}&query=${query}`;
+    const apiUrl = `https://api.unsplash.com/search/photos?page=${page}&query=${query}&per_page=12`;
     axios
       .get(apiUrl, {
         headers: {
@@ -45,25 +57,32 @@ function App() {
         console.log(err);
       });
   };
+
   // pages
   const handleNext = () => {
     setPage((page) => page + 1);
-    console.log(page)
   };
   const handlePrev = () => {
     if (page > 1) {
       setPage((page) => page - 1);
-      console.log(page)
     }
+  };
+  const handleSearch = (query) => {
+    setQuery(query);
+    setPage(1);
   };
   return (
     <>
-      <Header onSearch={searchImage} />
-      <Pagination onSearch={searchImage} onNext={handleNext} onPrev={handlePrev} currentPage={page}/>
+      <Header onSearch={handleSearch} />
+      <Pagination
+        onSearch={handleSearch}
+        onNext={handleNext}
+        onPrev={handlePrev}
+        currentPage={page}
+      />
       <div className="mainC">
         {images && images.length > 0 && <Images images={images} />}
       </div>
-      <Pagination />
       <Footer />
     </>
   );

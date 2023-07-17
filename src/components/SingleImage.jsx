@@ -1,6 +1,7 @@
 import { FaDownload } from "react-icons/fa";
 
 const SingleImage = ({ image }) => {
+  console.log(image.links.download);
   return (
     <div className="card">
       <img src={image.urls.small} className="image" alt="hello" />
@@ -13,7 +14,7 @@ const SingleImage = ({ image }) => {
           <div className="name">{image.user.name}</div>
         </div>
         <div className="download">
-         <a href={image.links.download}>Download <FaDownload /></a>
+         <a href={image.links.download} download>Download <FaDownload /></a>
         </div>
       </div>
     </div>
