@@ -129,18 +129,26 @@ footer{
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
+  padding: 2rem;
 }
 .main{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 1rem;
 }
 .left{
   display: flex;
 
 }
 .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: .3rem;
+  font-size: 1.1rem;
 
 }
 .credit{
@@ -148,6 +156,7 @@ footer{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: -1rem;
 }
 /* pagination */
 .page, .plist{

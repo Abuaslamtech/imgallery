@@ -5,7 +5,7 @@ const SearchImage = ({ onSearch }) => {
   const handleSearch = (e) => {
     e.preventDefault();
     onSearch(query);
-    console.log(query);
+
   };
   return (
     <form onSubmit={handleSearch}>
