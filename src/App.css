@@ -204,7 +204,25 @@ footer{
   background-color: black;
   color: white;
 }
-
+/* loading */
+.sic{
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+align-items: center;
+justify-content: center;
+}
+.sic p{
+  font-size: 2rem;
+}
+.sim{
+  font-size: 8rem;
+}
 /* mobile responsive */
 @media screen and (max-width: 700px) {
   /* header */

@@ -1,7 +1,6 @@
 import { FaDownload } from "react-icons/fa";
 
 const SingleImage = ({ image }) => {
-  console.log(image.links.download);
   return (
     <div className="card">
       <img src={image.urls.small} className="image" alt="hello" />
