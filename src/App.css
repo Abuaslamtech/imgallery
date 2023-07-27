@@ -130,6 +130,8 @@ footer{
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  position: absolute;
+  bottom: 0;
 }
 .main{
   display: flex;
@@ -247,5 +249,14 @@ button{
   }
   .download {
     width: fit-content;
+  }
+  /* footer */
+  footer{
+    padding:2rem 0;
+    position: absolute;
+    bottom: 0;
+  }
+  .right{
+    font-size: 1rem;
   }
 }
