@@ -208,8 +208,8 @@ footer{
 .sic{
   height: 100vh;
   width: 100vw;
-  background-color: blue;
-  color: #fff;
+  background-color: grey;
+  color: #000;
   display: flex;
   flex-direction: column;
   position: absolute;
