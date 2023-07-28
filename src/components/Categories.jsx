@@ -6,7 +6,6 @@ const Categories = ({ onSearch }) => {
     const selectedCategory = e.target.value;
     onSearch(e.target.value);
     setActiveCategory(selectedCategory);
-    console.log(activeCategory)
   };
   return (
     <section className="categories">
